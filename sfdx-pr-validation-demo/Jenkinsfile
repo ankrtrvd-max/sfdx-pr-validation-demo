@@ -42,11 +42,11 @@ pipeline {
 
     post {
         success {
-            echo "✅ Validation succeeded"
+            echo "Validation succeeded"
         }
         failure {
             mail to: 'ankur.trivedi@salesforce.com',
-                 subject: "❌ PR Validation Failed in Jenkins",
+                 subject: "PR Validation Failed in Jenkins",
                  body: "PR validation failed for build ${env.BUILD_NUMBER}. Check logs in Jenkins."
         }
     }
