@@ -6,13 +6,6 @@ pipeline {
         SCRATCH_ORG_ALIAS = "PR_Validation_Org"
     }
 
-    triggers {
-        githubPullRequest {
-            useGitHubHooks()
-            permitAll()
-        }
-    }
-
     stages {
         stage('Checkout') {
             steps {
